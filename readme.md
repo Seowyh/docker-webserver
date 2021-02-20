@@ -59,7 +59,7 @@ gcloud services enable cloudbuild.googleapis.com run.googleapis.com containerreg
 create project in GCP  
 update project ID
 gcloud auth configure-docker.
-
+project id misspelled
 
 ## Github 
 
