@@ -57,7 +57,7 @@ Enable container registry
 gcloud services enable cloudbuild.googleapis.com run.googleapis.com containerregistry.googleapis.com
 
 create project in GCP  
-
+update project ID
 
 ## Github 
 
