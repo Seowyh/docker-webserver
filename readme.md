@@ -1,3 +1,49 @@
-Version 1.6 update the credential again
-v1.7 update login yml
-v1.8 updated the credential name mis-spelled
+# Build and Deploy a Webserver to Cloud Run
+
+## Create the resources locally
+
+Create the 4 files in this repository in your local folder:
+1) package.json
+2) index.js
+3) Dockerfile
+4) .github/workflows/GCP-Deploy.yml
+
+## Google Cloud Console
+
+1) Go to google cloud console  
+[Google Cloud Console](https://console.cloud.google.com/)
+
+2) Follow this tutorial
+[Google Cloud Run with Github  Actions](https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions)
+
+under Cloud Run to obtain the followings:
+GCP_PROJECT_ID is your \$PROJECT_ID.  
+GCP_APP_NAME is your app name.  
+GCP_EMAIL is the email from the service account you created, which should look like this: \$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com  
+GPC_CREDENTIALS is the content from the key.json file that you just created.
+
+## Github 
+
+1) Create a github repository
+2) Go to settings>secrets and enter to 4 secret values
+
+## Commit and Push
+
+1) Go to your local folder
+2) Git add, commit and push to Github repo
+
+You should see github actions building and deploying the webserver container to your Google Cloud run
+
+## Verity 
+
+1) Go to Google cloud platform. 
+2) Under Cloud Run
+3) Click on the app name
+4) Click on the URL to verify webserver Hello World runs
+
+## Cleanup
+
+To avoid incurring charges, 
+1) delete the app under Cloud Run thereafter
+2) go to home>bucket resources and delete the buckets created for the app
+
