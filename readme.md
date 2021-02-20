@@ -14,9 +14,9 @@ Create the 4 files in this repository in your local folder:
 [Google Cloud Console](https://console.cloud.google.com/)
 
 2) Follow this tutorial
-[Google Cloud Run with Github  Actions](https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions)
+[Google Cloud Run with Github  Actions](https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions)  
 
-under Cloud Run to obtain the followings:  
+3) under Cloud Run to obtain the followings:  
 GCP_PROJECT_ID is your \$PROJECT_ID.  
 GCP_APP_NAME is your app name.  
 GCP_EMAIL is the email from the service account you created, which should look like this:   
