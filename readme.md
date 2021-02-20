@@ -23,6 +23,38 @@ GCP_EMAIL is the email from the service account you created, which should look l
 \$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com  
 GPC_CREDENTIALS is the content from the key.json file that you just created.
 
+
+Step 1
+
+export PROJECT_ID=__*your own project unique ID*__
+export ACCOUNT_NAME=__*your own account name*__
+
+Step 6
+gcloud iam service-accounts create $ACCOUNT_NAME \\
+  --description="Cloud Run deploy account" \\
+  --display-name="Cloud-Run-Deploy"
+
+Step 7 execute one by one:
+
+gcloud projects add-iam-policy-binding \$PROJECT_ID \\
+  --member=serviceAccount:\$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com \\
+  --role=roles/run.admin
+
+gcloud projects add-iam-policy-binding \$PROJECT_ID \\
+  --member=serviceAccount:\$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com \\
+  --role=roles/storage.admin
+
+gcloud projects add-iam-policy-binding \$PROJECT_ID \\
+  --member=serviceAccount:\$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com \\
+  --role=roles/iam.serviceAccountUser
+
+Step 8 create key.json and copy out
+
+gcloud iam service-accounts keys create key.json \\
+    --iam-account \$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com
+
+
+
 ## Github 
 
 1) Create a github repository
