@@ -16,10 +16,11 @@ Create the 4 files in this repository in your local folder:
 2) Follow this tutorial
 [Google Cloud Run with Github  Actions](https://cloud.google.com/community/tutorials/cicd-cloud-run-github-actions)
 
-under Cloud Run to obtain the followings:
+under Cloud Run to obtain the followings:  
 GCP_PROJECT_ID is your \$PROJECT_ID.  
 GCP_APP_NAME is your app name.  
-GCP_EMAIL is the email from the service account you created, which should look like this: \$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com  
+GCP_EMAIL is the email from the service account you created, which should look like this:   
+\$ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com  
 GPC_CREDENTIALS is the content from the key.json file that you just created.
 
 ## Github 
@@ -34,7 +35,7 @@ GPC_CREDENTIALS is the content from the key.json file that you just created.
 
 You should see github actions building and deploying the webserver container to your Google Cloud run
 
-## Verity 
+## Verify 
 
 1) Go to Google cloud platform. 
 2) Under Cloud Run
