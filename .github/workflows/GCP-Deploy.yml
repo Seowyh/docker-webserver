@@ -17,7 +17,8 @@ jobs:
         steps:
 
         - name: Login
-          uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+#          uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+          uses: google-github-actions/setup-gcloud
           with:
             project_id: ${{ secrets.GCP_PROJECT_ID }}
             service_account_email: ${{ secrets.GCP_EMAIL }}
