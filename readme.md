@@ -60,6 +60,7 @@ create project in GCP
 update project ID
 gcloud auth configure-docker.
 project id misspelled
+new project gitact created
 
 ## Github 
 
