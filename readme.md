@@ -24,11 +24,11 @@ GCP_EMAIL is the email from the service account you created, which should look l
 GPC_CREDENTIALS is the content from the key.json file that you just created.
 
 
-Step 1
+Step 1  
 
 export PROJECT_ID=__*your own project unique ID*__
 export ACCOUNT_NAME=__*your own account name*__
-
+<br>
 Step 6
 gcloud iam service-accounts create $ACCOUNT_NAME \\
   --description="Cloud Run deploy account" \\
