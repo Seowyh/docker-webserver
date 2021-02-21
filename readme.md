@@ -22,7 +22,7 @@ create project : _gitact_ __*(choose your own project ID)*__
 
 ### Step 2: Set variable and enable essential services  
 Under Console terminal >  
->export PROJECT_ID=_gitact_ __*(project ID as above)*__
+>export PROJECT_ID=_gitact_ __*(project ID as above)*__  
 >export ACCOUNT_NAME=_gitacc_ __*(choose your own account name)*__  
 
 >gcloud services enable cloudbuild.googleapis.com run.googleapis.com containerregistry.googleapis.com  
@@ -59,38 +59,38 @@ Under Console terminal >
 Go to settings>secrets and enter to 4 secret values  
 
 GCP_APP_NAME=_your app name_ __*(your choice of app name)*__  
-PROJECT_ID=_gitact_ __*(your project name) *__ 
-GCP_EMAIL = _gitacc@gitact.iam.gserviceaccount.com_ __*(your client email from key.json)*__  
-GCP_CREDENTIALS = __*key.json content*__  
+PROJECT_ID=_gitact_  __*(your project name)*__   
+GCP_EMAIL = _gitacc@gitact.iam.gserviceaccount.com_ __*(your client email from key.json)*__    
+GCP_CREDENTIALS = __*{key.json content}*__    
 
 
 ## Create the resources locally
 
 Copy or clone the 4 files in this repository to your local folder:
-1) package.json
-2) index.js
-3) Dockerfile
-4) .github/workflows/GCP-Deploy.yml
+1) package.json  
+2) index.js  
+3) Dockerfile  
+4) .github/workflows/GCP-Deploy.yml  
 
 
 
 ## Commit and Push
 
-1) Go to your local folder
-2) Git add, commit and push to Github repo
+1) Go to your local folder  
+2) Git add, commit and push to Github repo  
 
 You should see github actions building and deploying the webserver container to your Google Cloud run
 
 ## Verify 
 
-1) Go to Google cloud platform. 
-2) Under Cloud Run
-3) Click on the app name
-4) Click on the URL to verify webserver Hello World is running
+1) Go to Google cloud platform.  
+2) Under Cloud Run  
+3) Click on the app name  
+4) Click on the URL to verify webserver Hello World is running  
 
 ## Cleanup
 
-To avoid incurring charges in GCP: 
-1) delete the app under Cloud Run thereafter
-2) go to home>bucket resources and delete the buckets created for the app
+To avoid incurring charges in GCP:  
+1) delete the app under Cloud Run thereafter  
+2) go to home>bucket resources and delete the buckets created for the app  
 
